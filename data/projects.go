@@ -8,11 +8,6 @@ func NewProjectsDAO(db *gorm.DB) *ProjectsDAO {
 	return &ProjectsDAO{db}
 }
 
-type ProjectTemp struct {
-	ID   *int   `json:"id"`
-	Name string `json:"label"`
-}
-
 type ProjectUpdate struct {
 	Name string `json:"label"`
 }
@@ -27,21 +22,10 @@ func (d *ProjectsDAO) GetOne(id int) (Project, error) {
 	return project, err
 }
 
-func (d *ProjectsDAO) GetAll() ([]ProjectTemp, error) {
+func (d *ProjectsDAO) GetAll() ([]Project, error) {
 	projects := make([]Project, 0)
 	err := d.db.Find(&projects).Error
-
-	if err == nil && len(projects) > 0 {
-		temp := make([]ProjectTemp, len(projects)+1)
-		temp[0] = ProjectTemp{nil, "No project"}
-		for i := range projects {
-			temp[i+1].ID = &projects[i].ID
-			temp[i+1].Name = projects[i].Name
-		}
-		return temp, nil
-	}
-
-	return nil, err
+	return projects, err
 }
 
 func (d *ProjectsDAO) Add(update *ProjectUpdate) (int, error) {
