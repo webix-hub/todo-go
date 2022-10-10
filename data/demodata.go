@@ -53,16 +53,6 @@ func dataUp(d *DAO) (err error) {
 	}
 	err = tx.Create(&tasks).Error
 
-	tags := make([]Tag, 0)
-	err = parseDemodata(&tags, "./demodata/tags.json")
-	if err != nil {
-		return
-	}
-	err = tx.Create(&tags).Error
-	if err != nil {
-		return
-	}
-
 	return
 }
 

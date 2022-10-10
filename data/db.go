@@ -14,7 +14,6 @@ type DAO struct {
 	Tasks    *TasksDAO
 	Users    *UsersDAO
 	Projects *ProjectsDAO
-	Tags     *TagsDAO
 }
 
 func (d *DAO) GetDB() *gorm.DB {
@@ -35,14 +34,12 @@ func NewDAO(config *config.DBConfig, url string) *DAO {
 	db.AutoMigrate(&Task{})
 	db.AutoMigrate(&User{})
 	db.AutoMigrate(&Project{})
-	db.AutoMigrate(&Tag{})
 
 	dao := &DAO{
 		db:       db,
 		Tasks:    NewTasksDAO(db),
 		Users:    NewUsersDAO(db),
 		Projects: NewProjectsDAO(db),
-		Tags:     NewTagsDAO(db),
 	}
 
 	if config.ResetOnStart {

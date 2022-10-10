@@ -113,11 +113,6 @@ func initRoutes(r chi.Router, dao *data.DAO) {
 		sendResponse(w, nil, err)
 	})
 
-	r.Get("/tags", func(w http.ResponseWriter, r *http.Request) {
-		data, err := dao.Tags.GetAll()
-		sendResponse(w, data, err)
-	})
-
 	r.Post("/clone", func(w http.ResponseWriter, r *http.Request) {
 		info := data.PasteInfo{}
 		err := parseFormObject(w, r, &info)
