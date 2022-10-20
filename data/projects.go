@@ -9,7 +9,7 @@ func NewProjectsDAO(db *gorm.DB) *ProjectsDAO {
 }
 
 type ProjectUpdate struct {
-	Name string `json:"label"`
+	Name string `json:"value"`
 }
 
 type ProjectsDAO struct {
