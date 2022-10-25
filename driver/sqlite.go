@@ -15,7 +15,6 @@ func (d SQLiteDriver) GetConnection(c *config.DBConfig) (*gorm.DB, error) {
 }
 
 func (d SQLiteDriver) DataDown(db *gorm.DB) {
-	mustExec(db, "DELETE FROM tags")
 	mustExec(db, "DELETE FROM tasks")
 	mustExec(db, "DELETE FROM users")
 	mustExec(db, "DELETE FROM projects")
