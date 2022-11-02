@@ -2,21 +2,21 @@
   {
     "id": 1,
     "value": "Don Smith",
-    "path": "https://snippet.dhtmlx.com/codebase/data/common/img/02/avatar_61.jpg"
+    "path": "https://docs.webix.com/samples/63_kanban/common/imgs/1.jpg"
   },
   {
     "id": 2,
     "value": "Nadia Chasey",
-    "path": "https://snippet.dhtmlx.com/codebase/data/common/img/02/avatar_63.jpg"
+    "path": "https://docs.webix.com/samples/63_kanban/common/imgs/2.jpg"
   },
   {
     "id": 3,
     "value": "Mike Young",
-    "path": "https://snippet.dhtmlx.com/codebase/data/common/img/02/avatar_03.jpg"
+    "path": "https://docs.webix.com/samples/63_kanban/common/imgs/3.jpg"
   },
   {
     "id": 4,
     "value": "Elvira Webb",
-    "path": "https://snippet.dhtmlx.com/codebase/data/common/img/02/avatar_33.jpg"
+    "path": "https://docs.webix.com/samples/63_kanban/common/imgs/4.jpg"
   }
 ]

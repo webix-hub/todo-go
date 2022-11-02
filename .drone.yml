@@ -16,7 +16,7 @@ steps:
     username: drone
     password:
       from_secret: docker_password
-    repo: registry.webix.io/${DRONE_REPO_NAME}
+    repo: registry.webix.io/${DRONE_REPO_NAME}-webix
     tags: "${DRONE_BRANCH}"
     registry: registry.webix.io
 
@@ -26,7 +26,7 @@ steps:
     RESTART_HOOK_TOKEN:
       from_secret: restart_hook_token
   commands:
-    - curl -s "https://hook.webix.io/dev-docker?token=$${RESTART_HOOK_TOKEN}&project=$${DRONE_REPO}&branch=${DRONE_BRANCH}"
+    - curl -s "https://hook.webix.io/dev-docker?token=$${RESTART_HOOK_TOKEN}&project=$${DRONE_REPO}-webix&branch=${DRONE_BRANCH}"
 
 trigger:
   branch:

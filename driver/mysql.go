@@ -20,7 +20,6 @@ func (d MySqlDriver) GetConnection(c *config.DBConfig) (*gorm.DB, error) {
 
 func (d MySqlDriver) DataDown(db *gorm.DB) {
 	mustExec(db, "SET FOREIGN_KEY_CHECKS = 0")
-	mustExec(db, "TRUNCATE TABLE tags")
 	mustExec(db, "TRUNCATE TABLE tasks")
 	mustExec(db, "TRUNCATE TABLE users")
 	mustExec(db, "TRUNCATE TABLE projects")
