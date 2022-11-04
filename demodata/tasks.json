@@ -17,7 +17,7 @@
     "text": "Build your first app with CODE SNIPPET (snippet.webix.com)",
     "checked": false,
     "assigned": [2],
-    "due_date": "2023-02-16T00:00:00.000Z",
+    "due_date": "2023-02-16 00:00:00",
     "parent": 0
   },
   {
@@ -30,7 +30,7 @@
     "id": 5,
     "text": "Enjoy coding with Webix 😎",
     "checked": false,
-    "due_date": "2017-03-11T00:00:00.000Z",
+    "due_date": "2017-03-11 00:00:00",
     "parent": 0
   },
   {
@@ -108,6 +108,7 @@
     "text": "Chat",
     "checked": false,
     "project": 1,
+    "due_date": "2022-03-08 21:00:00",
     "parent": 8
   },
   {
@@ -122,6 +123,7 @@
     "text": "Gantt",
     "checked": false,
     "project": 1,
+    "due_date": "2021-06-14 21:00:00",
     "parent": 8
   },
   {
@@ -200,7 +202,7 @@
     "text": "Build your first app with CODE SNIPPET (snippet.webix.com) #important",
     "checked": false,
     "assigned": [2],
-    "due_date": "2023-02-16T00:00:00.000Z",
+    "due_date": "2023-02-16 00:00:00",
     "project": 2,
     "parent": 0
   },
@@ -215,7 +217,7 @@
     "id": 31,
     "text": "Enjoy coding with Webix 😎",
     "checked": false,
-    "due_date": "2017-03-11T00:00:00.000Z",
+    "due_date": "2017-03-11 00:00:00",
     "project": 2,
     "parent": 0
   }
