@@ -41,6 +41,7 @@ func dataUp(d *DAO) (err error) {
 	if err != nil {
 		return
 	}
+	indexPull := make(map[int]int)
 	for i := range tasks {
 		if len(tasks[i].AssignedUsersIDs) > 0 {
 			users := make([]User, 0)
@@ -50,6 +51,8 @@ func dataUp(d *DAO) (err error) {
 			}
 			tasks[i].AssignedUsers = users
 		}
+		tasks[i].Index = indexPull[tasks[i].ProjectID]
+		indexPull[tasks[i].ProjectID]++
 	}
 	err = tx.Create(&tasks).Error
 
