@@ -1,13 +1,13 @@
 package data
 
-import "time"
+import "web-widgets/todo-go/common"
 
 type TaskProps struct {
-	Text      string     `json:"text"`
-	Checked   bool       `json:"checked"`
-	DueDate   *time.Time `json:"due_date,omitempty"`
-	ParentID  int        `json:"parent" gorm:"column:parent"`
-	ProjectID int        `json:"project,omitempty" gorm:"column:project"`
+	Text      string        `json:"text"`
+	Checked   bool          `json:"checked"`
+	DueDate   *common.JDate `json:"due_date,omitempty"`
+	ParentID  int           `json:"parent" gorm:"column:parent"`
+	ProjectID int           `json:"project,omitempty" gorm:"column:project"`
 
 	AssignedUsers    []User `gorm:"many2many:assigned_users" json:"-"`
 	AssignedUsersIDs []int  `gorm:"-" json:"assigned"`
