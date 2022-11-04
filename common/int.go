@@ -1,9 +1,11 @@
 package common
+
 import (
 	"encoding/json"
 )
 
 const QuotesByte = 34
+
 type FuzzyInt int
 
 func (f *FuzzyInt) UnmarshalJSON(data []byte) error {
